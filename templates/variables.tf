@@ -1,5 +1,5 @@
 variable "ENV"{
-  default = 'dev'
+  default = "dev"
 }
 
 variable "AWS_REGION" {
