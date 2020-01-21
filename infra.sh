@@ -47,7 +47,7 @@ terraform apply \
   -var "INGRESS_PROTOCOL=$INGRESS_PROTOCOL" \
   -var "INGRESS_CIDR=$INGRESS_CIDR" \
   -var "AMI=$AMI_ID" \
-  -var "KEY_PATH=$KEY_PATH"
-#  -auto-approve
+  -var "KEY_PATH=$KEY_PATH" \
+  -auto-approve
 
 echo $AWS_REGION
