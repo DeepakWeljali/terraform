@@ -12,7 +12,7 @@ if [[ "$#" -lt 2 ]]; then
   exit 1
 fi
 
-UTILITY_PATH='./datafoundry/scripts'
+UTILITY_PATH='.'
 
 cat <<EOF_code_params
 SDLC_ENVIRONMENT=$SDLC_ENVIRONMENT
@@ -29,8 +29,8 @@ fi
 
 #Deployment
 terraform init
-terraform plan
-terraform apply \
+#terraform plan
+terraform plan \
   -var 'AWS_REGION=$AWS_REGION_NAME' 
   -var 'VPC_CIDR=$VPC_CIDR' 
   -var 'PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR' 
