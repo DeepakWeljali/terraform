@@ -34,7 +34,7 @@ cd $TERRAFORM_TEMPLATES
 terraform init
 #terraform plan
 terraform plan \
-  -var 'AWS_REGION=$AWS_REGION_NAME' 
+  -var 'AWS_REGION=$AWS_REGION' 
   -var 'VPC_CIDR=$VPC_CIDR' 
   -var 'PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR' 
   -var 'EGRESS_PROTOCOL=$EGRESS_PROTOCOL' 
