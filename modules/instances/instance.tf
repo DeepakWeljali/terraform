@@ -1,20 +1,22 @@
-variable "ENV" {
-}
-
+variable "ENV" {}
 variable "INSTANCE_TYPE" {
   default = "t2.micro"
 }
-
 variable "PUBLIC_SUBNETS" {
   type = list
 }
-
-variable "VPC_ID" {
-}
-
-variable "PATH_TO_PUBLIC_KEY" {
+variable "VPC_ID" {}
+variable "INGRESS_PORT" {}
+variable "INGRESS_PROTOCOL" {}
+variable "INGRESS_CIDR" {}
+variable "EGRESS_PROTOCOL" {}
+variable "EGRESS_PORT" {}
+variable "EGRESS_CIDR" {}
+variable "KEY_PATH" {
   default = "mykey.pub"
 }
+
+
 
 data "aws_ami" "ubuntu" {
   most_recent = true
@@ -57,17 +59,17 @@ resource "aws_security_group" "allow-ssh" {
   description = "security group that allows ssh and all egress traffic"
 
   egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = var.EGRESS_PORT
+    to_port     = var.EGRESS_PORT
+    protocol    = var.EGRESS_PROTOCOL
+    cidr_blocks = var.EGRESS_CIDR
   }
 
   ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    from_port   = var.INGRESS_PORT
+    to_port     = var.INGRESS_PORT
+    protocol    = var.INGRESS_PROTOCOL
+    cidr_blocks = var.INGRESS_CIDR
   }
 
   tags = {
@@ -78,6 +80,6 @@ resource "aws_security_group" "allow-ssh" {
 
 resource "aws_key_pair" "mykeypair" {
   key_name   = "mykeypair-${var.ENV}"
-  public_key = file("${path.root}/${var.PATH_TO_PUBLIC_KEY}")
+  public_key = file("${path.root}/${var.KEY_PATH}")
 }
 
