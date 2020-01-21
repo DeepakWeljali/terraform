@@ -3,6 +3,8 @@
 set -e
 echo "### Infra deployment for the provided sdlc environment"
 
+TERRAFORM_TEMPLATES="templates"
+
 SDLC_ENVIRONMENT=$1
 BRANCH=$2
 
@@ -27,6 +29,7 @@ if [ ! -f "${UTILITY_SCRIPT}" ]; then
 fi
 . ${UTILITY_SCRIPT}
 
+cd $TERRAFORM_TEMPLATES
 #Deployment
 terraform init
 #terraform plan
