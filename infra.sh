@@ -33,16 +33,21 @@ cd $TERRAFORM_TEMPLATES
 #Deployment
 terraform init
 #terraform plan
-terraform plan \
-  -var 'AWS_REGION=$AWS_REGION' 
-  -var 'VPC_CIDR=$VPC_CIDR' 
-  -var 'PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR' 
-  -var 'EGRESS_PROTOCOL=$EGRESS_PROTOCOL' 
-  -var 'EGRESS_PORT=EGRESS_PORT' 
-  -var 'EGRESS_CIDR=$EGRESS_CIDR' 
-  -var 'INGRESS_PORT=$INGRESS_PORT' 
-  -var 'INGRESS_PROTOCOL=$INGRESS_PROTOCOL' 
-  -var 'INGRESS_CIDR=$INGRESS_CIDR' 
-  -var 'AMI=$AMI_ID' 
-  -var 'KEY_PATH=$KEY_PATH' 
-  -auto-approve
+terraform plan
+
+echo $AWS_REGION
+terraform apply \
+  -var "AWS_REGION=$AWS_REGION" \
+  -var "VPC_CIDR=$VPC_CIDR" \
+  -var "PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR" \
+  -var "EGRESS_PROTOCOL=$EGRESS_PROTOCOL" \
+  -var "EGRESS_PORT=$EGRESS_PORT" \
+  -var "EGRESS_CIDR=$EGRESS_CIDR" \
+  -var "INGRESS_PORT=$INGRESS_PORT" \
+  -var "INGRESS_PROTOCOL=$INGRESS_PROTOCOL" \
+  -var "INGRESS_CIDR=$INGRESS_CIDR" \
+  -var "AMI=$AMI_ID" \
+  -var "KEY_PATH=$KEY_PATH"
+#  -auto-approve
+
+echo $AWS_REGION

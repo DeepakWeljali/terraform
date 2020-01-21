@@ -15,13 +15,13 @@ variable "VPC_CIDR" {
 variable "PUBLIC_SUBNET_CIDR"  {
   type = list
   description = "CIDR for the public subnet"
-  default     = ["10.0.1.0/28"]
+  default     = ["0.0.1.0/24"]
 }
 
 variable "PRIVATE_SUBNET_CIDR" {
   type = list
   description = "CIDR for the private subnet"
-  default     = ["10.0.2.0/28"]
+  default     = ["10.0.2.0/24"]
 }
 
 variable "EGRESS_PORT" {

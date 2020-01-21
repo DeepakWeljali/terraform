@@ -20,13 +20,13 @@ function set_environment(){
       ACCOUNT_NAME="data-foundry"
       ACCOUNT_NUMBER="6542456899"
       VPC_CIDR="10.0.0.0/16"
-      PUBLIC_SUBNET_CIDR="[10.0.1.0/28]"
+      PUBLIC_SUBNET_CIDR='["10.0.1.0/28"]'
       EGRESS_PROTOCOL="-1"
       EGRESS_PORT="0"
-      EGRESS_CIDR="[0.0.0.0/0]"
+      EGRESS_CIDR='["0.0.0.0/0"]'
       INGRESS_PORT="22"
       INGRESS_PROTOCOL="tcp"
-      INGRESS_CIDR="[0.0.0.0/0]"
+      INGRESS_CIDR='["0.0.0.0/0"]'
       AMI_ID="ami-4fffc834"
       KEY_PATH="mykey.pub"
       ;;
@@ -36,13 +36,13 @@ function set_environment(){
       ACCOUNT_NAME="data-foundry"
       ACCOUNT_NUMBER="6542456899"
       VPC_CIDR="10.0.0.0/16"
-      PUBLIC_SUBNET_CIDR="[10.0.1.0/28]"
+      PUBLIC_SUBNET_CIDR='["10.0.1.0/2"]'
       EGRESS_PROTOCOL="-1"
       EGRESS_PORT="0"
-      EGRESS_CIDR="[0.0.0.0/0]"
+      EGRESS_CIDR='["0.0.0.0/0"]'
       INGRESS_PORT="22"
       INGRESS_PROTOCOL="tcp"
-      INGRESS_CIDR="[0.0.0.0/0]"
+      INGRESS_CIDR='["0.0.0.0/0"]'
       AMI_ID="ami-4fffc834"
       KEY_PATH="mykey.pub"
       ;;
