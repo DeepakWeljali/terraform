@@ -1,6 +1,6 @@
 variable "ENV" {}
 variable "INSTANCE_TYPE" {}
-variable "AMI_ID"
+variable "AMI_ID" {}
 variable "PUBLIC_SUBNETS" {
   type = list
 }
