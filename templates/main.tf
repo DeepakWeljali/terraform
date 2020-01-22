@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "psl-terraform"
-    key = datafoundry
+    key = "datafoundry"
     region = "us-east-1"
   }
 }
