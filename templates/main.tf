@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "psl-terraform"
-    key = "datafoundryinstance-${var.ENV}"
+    key = datafoundry
     region = "us-east-1"
   }
 }
