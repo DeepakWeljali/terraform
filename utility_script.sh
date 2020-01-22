@@ -27,6 +27,7 @@ function set_environment(){
       INGRESS_PORT="22"
       INGRESS_PROTOCOL="tcp"
       INGRESS_CIDR='["0.0.0.0/0"]'
+      INSTANCE_TYPE="t2.micro"
       AMI_ID="ami-4fffc834"
       KEY_PATH="mykey.pub"
       ;;
@@ -43,6 +44,7 @@ function set_environment(){
       INGRESS_PORT="22"
       INGRESS_PROTOCOL="tcp"
       INGRESS_CIDR='["0.0.0.0/0"]'
+      INSTANCE_TYPE="t2.micro"
       AMI_ID="ami-4fffc834"
       KEY_PATH="mykey.pub"
       ;;

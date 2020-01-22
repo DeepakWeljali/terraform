@@ -46,6 +46,7 @@ terraform apply \
   -var "INGRESS_PORT=$INGRESS_PORT" \
   -var "INGRESS_PROTOCOL=$INGRESS_PROTOCOL" \
   -var "INGRESS_CIDR=$INGRESS_CIDR" \
+  -var "INSTANCE_TYPE=$INSTANCE_TYPE"
   -var "AMI=$AMI_ID" \
   -var "KEY_PATH=$KEY_PATH" \
   -auto-approve

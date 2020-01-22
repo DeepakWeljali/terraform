@@ -1,7 +1,5 @@
 variable "ENV" {}
-variable "INSTANCE_TYPE" {
-  default = "t2.micro"
-}
+variable "INSTANCE_TYPE" {}
 variable "PUBLIC_SUBNETS" {
   type = list
 }
@@ -15,7 +13,6 @@ variable "EGRESS_CIDR" {}
 variable "KEY_PATH" {
   default = "mykey.pub"
 }
-
 
 
 data "aws_ami" "ubuntu" {
