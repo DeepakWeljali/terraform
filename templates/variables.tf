@@ -10,6 +10,10 @@ variable "INSTANCE_TYPE" {
   default = "t2.micro"
 }
 
+variable "AMI_ID" {
+  default = "ami-062f7200baf2fa504"
+}
+
 variable "VPC_CIDR" {
   type = string
   description = "CIDR for the VPC"
