@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "psl-terraform"
+    region = "us-east-1"
+  }
+}
+
+
 module "main-vpc" {
   source     = "../modules/vpc"
   ENV        = var.ENV
