@@ -2,8 +2,8 @@ if [ ${provider} == aws ]
 then
    echo provider is ${provider}
    pwd
-   sh setenv.sh
-   sh infra.sh ${env} master
+   sh scripts/setenv.sh
+   sh scripts/infra.sh ${env} master
 elif [ ${provider} == gcp ]
 then
    echo provider is ${provider}
