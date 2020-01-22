@@ -22,7 +22,7 @@ BRANCH=$BRANCH
 EOF_code_params
 
 # Check if we have the utility script and execute it
-UTILITY_SCRIPT="${UTILITY_PATH}/utility_script.sh"
+UTILITY_SCRIPT="${UTILITY_PATH}/setenv.sh"
 if [ ! -f "${UTILITY_SCRIPT}" ]; then
   echo "FATAL: ${UTILITY_SCRIPT} not found. Unable to include shared functions."
   exit 1
