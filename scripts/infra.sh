@@ -14,7 +14,7 @@ if [[ "$#" -lt 2 ]]; then
   exit 1
 fi
 
-UTILITY_PATH='.'
+UTILITY_PATH='scripts'
 
 cat <<EOF_code_params
 SDLC_ENVIRONMENT=$SDLC_ENVIRONMENT
