@@ -1,3 +1,5 @@
+variable "RDS" {}
+
 terraform {
   backend "s3" {
     bucket = "psl-terraform"
