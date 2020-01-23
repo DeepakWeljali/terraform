@@ -6,7 +6,6 @@ terraform {
   }
 }
 
-
 module "main-vpc" {
   source     = "../modules/vpc"
   ENV        = var.ENV
@@ -32,3 +31,6 @@ module "instances" {
   KEY_PATH = var.KEY_PATH
 }
 
+output "RDS" {
+  value = var.RDS
+}

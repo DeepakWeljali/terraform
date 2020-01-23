@@ -4,8 +4,7 @@
 #
 SDLC_ENVIRONMENT=$1
 echo ' -- Utility functions and shared variables included.'
-echo $RDS
-exit 1
+
 ###################
 # Global settings
 # Functions
@@ -72,4 +71,5 @@ cat <<EOF_set_environment
       INGRESS_CIDR=$INGRESS_CIDR
       AMI_ID=$AMI_ID
       KEY_PATH=$KEY_PATH
+      RDS=$RDS
 EOF_set_environment
