@@ -4,6 +4,9 @@ then
    if [ ${act} == create ]
    then
      echo "Infra creation started"
+     boolean rds = Boolean.getBoolean(rds);
+     echo $rds
+     exit 1
      sh scripts/setenv.sh
      sh scripts/infra.sh ${env} master
    else
