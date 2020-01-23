@@ -8,6 +8,7 @@ then
      sh scripts/infra.sh ${env} master
    else
      cd templates
+     terraform init
      terraform destroy
    fi
 elif [ ${provider} == gcp ]
