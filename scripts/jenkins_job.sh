@@ -3,6 +3,7 @@ then
    echo provider is ${provider}
    if [ ${act} == create ]
    then
+     echo "Delete inprogress"
      sh scripts/setenv.sh
      sh scripts/infra.sh ${env} master
    else
