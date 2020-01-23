@@ -3,13 +3,14 @@ then
    echo provider is ${provider}
    if [ ${act} == create ]
    then
-     echo "Delete inprogress"
+     echo "Infra creation started"
      sh scripts/setenv.sh
      sh scripts/infra.sh ${env} master
    else
+     echo "Delete inprogress"
      cd templates
      terraform init
-     terraform destroy
+     terraform destroy -auto-approve
    fi
 elif [ ${provider} == gcp ]
 then
