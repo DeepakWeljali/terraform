@@ -4,6 +4,8 @@
 #
 SDLC_ENVIRONMENT=$1
 echo ' -- Utility functions and shared variables included.'
+echo $RDS
+exit 1
 ###################
 # Global settings
 # Functions

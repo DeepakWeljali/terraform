@@ -4,8 +4,7 @@ then
    if [ ${act} == create ]
    then
      echo "Infra creation started"
-     echo ${rds}
-     exit 1
+     RDS=${rds}
      sh scripts/setenv.sh
      sh scripts/infra.sh ${env} master
    else
