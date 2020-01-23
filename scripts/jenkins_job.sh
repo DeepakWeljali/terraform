@@ -5,6 +5,9 @@ then
    then
      echo "Infra creation started"
      RDS=${rds}
+     echo ${rds}
+     echo $RDS
+     export RDS
      sh scripts/setenv.sh
      sh scripts/infra.sh ${env} master
    else
