@@ -47,5 +47,4 @@ terraform apply \
   -var "INSTANCE_TYPE=$INSTANCE_TYPE" \
   -var "AMI=$AMI_ID" \
   -var "KEY_PATH=$KEY_PATH" \
-  -var "RDS=$RDS" \
   -auto-approve
