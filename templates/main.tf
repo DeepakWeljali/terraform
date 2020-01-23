@@ -8,6 +8,11 @@ terraform {
   }
 }
 
+module "rds"
+{
+  source = "../modules/rds"  
+}
+
 module "main-vpc" {
   source     = "../modules/vpc"
   ENV        = var.ENV

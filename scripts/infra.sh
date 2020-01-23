@@ -34,18 +34,18 @@ cd $TERRAFORM_TEMPLATES
 terraform init
 terraform plan
 
-#echo $AWS_REGION
-#terraform apply \
-#  -var "AWS_REGION=$AWS_REGION" \
-#  -var "VPC_CIDR=$VPC_CIDR" \
-#  -var "PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR" \
-#  -var "EGRESS_PROTOCOL=$EGRESS_PROTOCOL" \
-#  -var "EGRESS_PORT=$EGRESS_PORT" \
-#  -var "EGRESS_CIDR=$EGRESS_CIDR" \
-#  -var "INGRESS_PORT=$INGRESS_PORT" \
-#  -var "INGRESS_PROTOCOL=$INGRESS_PROTOCOL" \
-#  -var "INGRESS_CIDR=$INGRESS_CIDR" \
-#  -var "INSTANCE_TYPE=$INSTANCE_TYPE" \
-#  -var "AMI=$AMI_ID" \
-#  -var "KEY_PATH=$KEY_PATH" \
-#  -auto-approve
+terraform apply \
+  -var "AWS_REGION=$AWS_REGION" \
+  -var "VPC_CIDR=$VPC_CIDR" \
+  -var "PUBLIC_SUBNET_CIDR=$PUBLIC_SUBNET_CIDR" \
+  -var "EGRESS_PROTOCOL=$EGRESS_PROTOCOL" \
+  -var "EGRESS_PORT=$EGRESS_PORT" \
+  -var "EGRESS_CIDR=$EGRESS_CIDR" \
+  -var "INGRESS_PORT=$INGRESS_PORT" \
+  -var "INGRESS_PROTOCOL=$INGRESS_PROTOCOL" \
+  -var "INGRESS_CIDR=$INGRESS_CIDR" \
+  -var "INSTANCE_TYPE=$INSTANCE_TYPE" \
+  -var "AMI=$AMI_ID" \
+  -var "KEY_PATH=$KEY_PATH" \
+  -var "RDS=$RDS" \
+  -auto-approve
