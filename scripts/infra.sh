@@ -32,7 +32,6 @@ fi
 cd $TERRAFORM_TEMPLATES
 #Deployment
 terraform init
-#terraform plan
 terraform plan
 
 echo $AWS_REGION
@@ -50,5 +49,3 @@ terraform apply \
   -var "AMI=$AMI_ID" \
   -var "KEY_PATH=$KEY_PATH" \
   -auto-approve
-
-echo $AWS_REGION
